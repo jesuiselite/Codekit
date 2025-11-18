@@ -1,14 +1,35 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: sans-serif;
     margin: 0;
     line-height: 1.6;
     font-size: 20px;
+
+    padding: 5%;
+}
+
+body.no--scroll{
+    overflow: hidden;
+}
+
+.menu__toggle{
+    background-color: blue;
+    color: aliceblue;
+    padding: 10px;
+    display: none;
+}
+
+.menu__el{
+    color: aqua;;
 }
 
 @media (max-width: 600px){
     
     .menu__toggle{
-        position: absolute;
+        position: fixed;
         top: 20px;
         right: 20px;
         cursor: pointer;
@@ -20,13 +41,23 @@ body{
         left: 0;
         width: 100%;
         height: 100%;
-        background-color:chocolate;
+        background-color:gray;
         margin: 0;
         z-index: 10;
-        /* cacher */
-        display: none;
+        
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        
+    }
+   
+    .menu__toggle{
+        display: block;
+    }
+
+    .menu--open{
+        display: block;
     }
     .menu--open .menu__liste{
-        display: block;
+        transform: translateX(0);
     }
 }
