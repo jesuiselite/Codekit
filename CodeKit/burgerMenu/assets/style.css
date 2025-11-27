@@ -1,0 +1,32 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+@media (max-width: 600px){
+    
+    .menu__toggle{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 20;
+    }
+    .menu__liste{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color:chocolate;
+        margin: 0;
+        z-index: 10;
+        /* cacher */
+        display: none;
+    }
+    .menu--open .menu__liste{
+        display: block;
+    }
+}
