@@ -17,11 +17,14 @@ body{
     right: 20px;
     bottom: 20px;
     display: none;
-    border-radius: 8px;
-    padding: 20px;
     background-color: gray;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 0px;
 }
 
 .backToTop--show{
-    display: inline;
+    display: inline-block;
 }
