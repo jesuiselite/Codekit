@@ -5,6 +5,10 @@ body{
     box-sizing: border-box;
 }
 
+.tab{
+    margin-top: 80px;
+}
+
 .tab__nav {
     display: flex;
     gap: 10px;
@@ -14,14 +18,20 @@ body{
 }
 .tab__el {
     padding: 10px;
+    border: 2px solid #000;
+    border-radius: 8px;
 }
 
 .tab__el a{
     display: block;
+    text-decoration: none;
+    color: #000;
 }
 
 .tab__container{
-    background-color: aliceblue;
+    border: 2px solid #000;
+    border-radius: 16px;
+    margin-top: 20px;
 }
 
 .tab__content {
@@ -34,23 +44,25 @@ body{
 } */
  
 .tab__el--active{
-    background-color: white;
-    color: blue;
-    border: blue solid 3px;
+    background-color: #000;
+}
+
+.tab__el--active a{
+    color: #fff;
 }
 
 .tab--a{
     .tab__container {
         position: relative;
         overflow: hidden;
-        transition: height 0.3s ease;
+        transition: height 0.3s ease-out;
     }
 
     .tab__content {
         position: absolute;
         opacity: 0;
         pointer-events: none;
-        transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease-out;
     }
     
     .tab__content--active {
